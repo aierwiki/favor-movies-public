@@ -1,0 +1,58 @@
+<view wx:if="{{isHide}}">
+ <view wx:if="{{canIUse}}" >
+  <view class='header'>
+   <image src='/icon/logo.jpeg'></image>
+  </view>
+   
+  <view class='content'>
+   <view>"好片收藏夹"小程序申请获取以下权限</view>
+   <text>获得你的公开信息(昵称，头像等)</text>
+  </view>
+   
+  <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+   授权登录
+  </button>
+ </view>
+ <view wx:else>请升级微信版本</view>
+</view>
+<view class="container" wx:else>
+  <scroll-view class="page-container">
+    <view class="list-container"  wx:if="{{!isLoadingEnd}}">
+      <view wx:for="{{movieData}}" wx:for-item="item" wx:key="movieId">
+        <block wx:if="{{item.isRender}}">
+          <view style="z-index:{{item.zIndex}};" class="item-container" animation="{{item.animationData}}" >
+            <view class="pic-box" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+              <image class="pic" mode="scaleToFill" src="{{item.picUrl}}"></image>
+              <view class="mask"></view>
+              <view class="text-box">
+                <text class="cn-name">{{item.name}}</text>
+                <view class="score-box">
+                  <text class="score-name">score：</text>
+                  <text class="score">{{item.score}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view wx:elif="{{isLoadingEnd}}" class="end noMore">没有更多了~</view>
+    <view class="buttons">
+      <view class="round-container" bindtap="onUnlike">
+        <view class="cross">
+          <image class="icon cross-icon" src="/icon/cross.png"></image>
+        </view>
+      </view>
+      <view class="round-container round-big">
+        <view bindtap="toUserList" class="userinfo">
+          <image class="userinfo-avatar" src="/icon/logo.jpeg" background-size="cover"></image>
+        </view>
+      </view>
+      <view class="round-container" bindtap="onLike">
+        <view class="heart">
+          <image class="icon heart-icon" src="/icon/heart_big.png"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

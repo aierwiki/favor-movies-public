@@ -1,0 +1,178 @@
+/* pages/test/test.wxss */
+.page-container{
+    background-color:#f2f3f9;
+    height:100%;
+    width:100%;
+    box-sizing:border-box;
+    align-items:center;
+    overflow:hidden;
+}
+.list-container{
+    position: relative;
+    box-sizing:border-box;
+    height:75%;
+    padding-top:10px;
+}
+.item-container{
+    position: absolute;
+    box-sizing:border-box;
+    width:100%;
+    height:100%;
+    padding:0rpx 40rpx;
+    border-radius: 0px 0px 11px 11px;
+    box-sizing:border-box;
+}
+.pic-box{
+    width:100%;
+    height:100%;
+    position:relative;
+    box-sizing:border-box;
+}
+.pic{
+    border-radius:10px;
+    width:100%;
+    height: 100%;
+}
+.mask {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.text-box{
+    padding: 10px 30px 25px 30px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    color:white;
+}
+.cn-name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+
+}
+
+.score-box {
+    padding-top: 15rpx;
+    font-size: 20px;
+}
+
+.score {
+    font-weight: 700;
+}
+.detail-box{
+    background-color: rgba(26, 188, 156, 1.0);
+    border-radius: 0px 0px 10px 10px;
+    padding:10px 8px;
+    color: white;
+}
+.detail-name {
+    padding-bottom: 5px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.detail {
+    font-size: 17px;
+    line-height: 1.4;
+}
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    box-sizing:border-box;
+    height:150px;
+    align-items: center;
+    padding:0rpx 40rpx;
+}
+.round-container {
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background-color:white;
+    margin:10rpx 30rpx 0rpx 30rpx;
+}
+.round-big {
+    width:160rpx;
+    height:160rpx;
+}
+.cross {
+    left:10px;
+}
+.cross-icon {
+    width:30px;
+    height:30px;
+    margin-top:6rpx;
+}
+.user-icon {
+    width:55px;
+    height:55px;
+}
+.heart {
+    right:10px;
+}
+.heart-icon {
+    width:38px;
+    height:32px;
+    margin-top:10rpx;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 50%;
+}
+.end{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:rgba(0,0,0,0.7);
+    height:75%;
+}
+.noMore{
+    font-size:16px;
+    padding:0px 0px 5px 0px;
+}
+
+.header {
+ margin: 90rpx 0 90rpx 50rpx;
+ border-bottom: 1px solid #ccc;
+ text-align: center;
+ width: 650rpx;
+ height: 300rpx;
+ line-height: 450rpx;
+}
+   
+.header image {
+ width: 200rpx;
+ height: 200rpx;
+}
+   
+.content {
+ margin-left: 50rpx;
+ margin-bottom: 90rpx;
+}
+   
+.content text {
+ display: block;
+ color: #9d9d9d;
+ margin-top: 40rpx;
+}
+   
+.bottom {
+ border-radius: 80rpx;
+ margin: 70rpx 50rpx;
+ font-size: 35rpx;
+}

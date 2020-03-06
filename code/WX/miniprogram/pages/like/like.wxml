@@ -1,0 +1,17 @@
+
+<view class="container">
+    <scroll-view wx:if="{{!isEmpty}}" class="list" scroll-y="true" style="height:{{windowHeight}}px;" bindscrolltolower="lower">
+        <view class="movie" wx:for="{{movieData}}" wx:for-item="item" wx:key="movieId">
+            <image class="pic" src="{{item.smallPicUrl}}"></image>
+            <view class="box">
+                <text class="name">{{item.name}}</text>
+                <view class="score-box">
+                    <text class="score-name">score：</text>
+                    <text class="score">{{item.score}}</text>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{isLoadingEnd}}" class="end noMore">没有更多了~</view>
+    </scroll-view>
+    <view wx:elif="{{isEmpty}}" class="end noList">暂时没有喜欢的电影~</view>
+</view>
